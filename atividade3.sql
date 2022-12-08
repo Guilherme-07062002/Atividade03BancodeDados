@@ -77,4 +77,7 @@ values
 -- select id_nf, sum(quantidade * valor_unit) as valor_total from produto group by id_nf having valor_total > 500 order by valor_total desc;
 
 -- j)
--- select cod_prod, menor, maior, media from produto;
+-- select cod_prod, min(desconto) as menor, max(desconto) maior, avg(desconto) as media from produto where desconto > 0 group by cod_prod;
+
+-- k)
+-- select id_nf, count(id_item) as quant_item from produto group by id_nf having quant_item > 3;
